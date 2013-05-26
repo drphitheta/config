@@ -1,0 +1,41 @@
+#! /bin/sh
+## $HOME/.xinitrc
+
+DEFAULT_SESSION=dwm
+
+## San Antonio, Texas 29.25 N (29.25) 98.30 W (-98.30)
+redshift -l 29.25:-98.30 -t 6000:5000 -m randr &
+# Using Armory now to manage bitcoin wallet
+#bitcoind -daemon &
+xrdb -load $HOME/.Xresources
+xscreensaver -no-splash &
+urxvtd &
+mpd &
+tail -n1 $HOME/.wallpaper | xargs feh --bg-fill
+
+dwm_xsetroot(){
+	while true; do
+		## OpenBSD apm
+		#local BATTERY="$(apm -l)%"
+		## Linux acpi
+		local BATTERY="$(acpi -b | cut -d ',' -f 2 | tr -d ' ')"
+
+		## Alternate date format
+		#local DATE=$(date +"%a %Y-%b-%d %H:%M")
+		local DATE=$(date)
+		xsetroot -name "bat: ${BATTERY} ${DATE}"
+
+		sleep 1
+	done &
+}
+
+case $DEFAULT_SESSION in 
+	xmonad)
+		xsetroot -cursor_name left_ptr
+		exec xmonad
+		;;
+	dwm)	 	
+		dwm_xsetroot
+		exec dwm
+		;;
+esac

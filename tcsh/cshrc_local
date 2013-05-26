@@ -1,0 +1,16 @@
+## Local settings/aliases.
+
+## Set path to include custom binaries
+set edit vim
+set -f path = ( $path $home/bin )
+
+## Local aliases
+alias mumble 'mumble >& /dev/null &'
+alias armory 'armory >& /dev/null &'
+alias virtualbox 'virtualbox >& /dev/null &'
+alias df 'df -h'
+alias top 'htop'
+alias chrome 'chromium \!* >& /dev/null &'
+## chromium with the TOR network
+alias chrome-socks 'chromium \!* --incognito --proxy-server="socks://localhost:9050" >& /dev/null &'
+alias zathura 'zathura \!* >& /dev/null &'

@@ -1,0 +1,20 @@
+Host local-server
+HostName 192.168.1.10
+Port 43
+User james
+
+Host mc-server
+HostName 192.168.1.10
+Port 43
+User minecraft
+
+Host git-server
+HostName 192.168.1.10
+Port 43
+User git
+
+# For updates/maintenance
+Host austin-pc
+HostName 192.168.1.124
+Port 22
+User austin

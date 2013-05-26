@@ -1,0 +1,4 @@
+#! /bin/sh
+
+cd /usr/local/games/Torchlight
+./Torchlight.bin.x86_64

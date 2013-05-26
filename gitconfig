@@ -1,0 +1,17 @@
+[user]
+	name = James Smith
+	email = drphitheta@lavabit.com
+[diff]
+	tool = vimdiff
+	algorithm = minimal
+[core]
+	editor = vim
+	pager = less
+[color]
+	diff = auto
+	branch = auto
+	status = auto
+[merge]
+	tool = vimdiff
+[pack]
+	threads = 0

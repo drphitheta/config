@@ -1,0 +1,9 @@
+#! /bin/sh
+
+## Java is a messy beast
+JAVA=$(which java)
+OPTS="-jar"
+LOCATION="${HOME}/.minecraft"
+BINARY="${LOCATION}/MinecraftDev.jar"
+
+${JAVA} ${OPTS} ${BINARY} &>/dev/null &

@@ -1,0 +1,5 @@
+## System-wide aliases
+
+alias h history
+## No, that's not a typo
+alias ls "ls-F"

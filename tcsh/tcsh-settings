@@ -1,0 +1,21 @@
+## System-wide settings
+
+set autolist 
+set autorehash 
+set complete = igncase
+## Autocorrect causes more problems than it solves :/
+#set correct = all
+
+set listlinks
+set nobeep
+set rmstar
+
+## Normal users end prompt in '$', super user ends in '#'
+set promptchars = '$#'
+set prompt = '%n@%m:%c2 %# '
+
+set pushdsilent
+set pushdtohome
+
+## Any command that takes longer than (15) seconds prints its time
+set time = 15
