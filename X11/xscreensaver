@@ -1,6 +1,4 @@
 # XScreenSaver Preferences File
-# Written by xscreensaver-demo 5.21 for james on Sat May 25 18:57:29 2013.
-# http://www.jwz.org/xscreensaver/
 
 timeout:	0:20:00
 cycle:		0:10:00
